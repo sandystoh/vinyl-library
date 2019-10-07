@@ -1,0 +1,18 @@
+<mat-card class="card">
+    <mat-card-content class="full-width">
+        <div class="full-width" fxLayout="row column" fxLayoutAlign="flex-start center" fxLayoutGap="1vw">
+            <div class="full-width">
+            <img [src]="vinyl.imageSrc" class="cover-image">
+            <div class="title">{{ vinyl.title }}</div>
+            <div class= "artist">{{vinyl.artist}}</div>
+            <div>
+                <button mat-button color="warn"
+                class="check" (click)="openDialog()"><mat-icon>edit</mat-icon></button>
+                <button mat-button color="accent"
+                        class="check" (click)="Delete(vinyl.id)"><mat-icon>delete</mat-icon></button>
+                <div class="rating" [ngStyle]="colorFormat(vinyl.rating)">{{vinyl.rating}}</div>
+            </div>
+         </div>
+        </div>
+  </mat-card-content>
+</mat-card>

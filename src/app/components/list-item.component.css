@@ -1,0 +1,55 @@
+.full-width {
+    width: 100% !important;
+}
+
+.card {
+    margin: 10px;
+    font-family: 'Oldenburg', cursive;
+    min-width: 400px;
+    color: #fff;
+    background: #000428;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cover-image {
+    width: 100px;
+    float: left;
+    padding-right: 15px;
+}
+
+.title {
+    padding-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.artist {
+    padding-top: 5px;
+    font-size: 1.1rem;
+}
+
+.rating {
+    border-radius: 15px;
+    padding: 10px;
+    float:right;
+    font-weight: 700;
+    background-color: #ffbf00;
+    color: #000;
+}
+
+
+
+
+.task-content {
+    margin: 0px 20px;
+}
+
+.check {
+    width: 40px;
+    min-width: unset!important;
+    padding: 0px !important;
+}
+
+

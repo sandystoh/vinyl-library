@@ -1,0 +1,4 @@
+
+<div *ngFor="let v of filterBy(filter); let i = index">
+    <app-list-item [vinyl]="v" (editVinyl)="editVinyl.emit($event)" (deleteVinyl)="deleteVinyl.emit($event)"></app-list-item>
+</div>

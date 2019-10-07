@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; font-size: 100%; }
+body { margin: 30px; font-family: 'Oldenburg', cursive; }
+body {
+    background-color: #000;
+    color: #fff;
+}

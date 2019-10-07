@@ -1,0 +1,30 @@
+<h3>{{pagetitle}}</h3>
+
+<form #addForm="ngForm" (ngSubmit)="processForm(addForm)" fxLayout="column row" fxLayoutAlign="flex-start center" fxLayoutGap="1vh">
+        <div class="upload-area">
+                        <label for="cover">
+        <img [src]="this.addVinyl.imageSrc"  class="image-upload"><br>
+        <input name="imageUrl" class="hide" type="file" id="cover" accept="image/*" (change)="handleInputChange($event)" />
+        
+              <div class="custom-file-upload">Choose Album Cover</div>
+        </label> 
+        </div> 
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Album Title" id="title" name="title" #title="ngModel" [(ngModel)]="this.addVinyl.title" ngModel required>
+            <mat-hint *ngIf="title.invalid && addForm.touched">Please enter an album title</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+                <input matInput placeholder="Artist Name" id="artist" name="artist" #artist="ngModel" [(ngModel)]="this.addVinyl.artist" ngModel required>
+                <mat-hint *ngIf="title.invalid && addForm.touched">Please enter an artist name</mat-hint>
+        </mat-form-field>
+    
+        <div class="full-width">Rating (1-10):
+            <div fxLayout="column row" class="slider">
+            <mat-slider class="full-width" [max]="10" [min]="0" [step]="1" [thumbLabel]="true" [tickInterval]="1" name="rating" id="rating" [(ngModel)]="this.addVinyl.rating" ngModel>
+            </mat-slider>
+            </div>
+        </div>
+    
+        <button mat-raised-button color="accent" class="full-width" button type=“submit” [disabled]="addForm.invalid"><mat-icon>add_circle_outline</mat-icon> {{pagetitle}} </button>
+</form>
